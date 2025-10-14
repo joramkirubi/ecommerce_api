@@ -1,26 +1,11 @@
-🛍️ E-commerce API (Django REST Framework)
-📌 Overview
+E-commerce API (Django REST Framework)
 
-This is a simple E-commerce API built using Django and Django REST Framework (DRF).
-It allows users to:
+Overview
 
-View a list of products
+This is a simple E-commerce API built with Django and Django REST Framework (DRF).
+It lets you view, add, edit, and delete products through API endpoints or the Django admin panel.
 
-Create new products (via the API or admin panel)
-
-Manage product details through the Django Admin dashboard
-
-🧩 Features
-
-Django REST Framework-based API
-
-CRUD operations for Products
-
-Admin panel for managing data
-
-SQLite database for easy setup
-
-⚙️ Tech Stack
+Tech Stack
 
 Backend: Django 5+, Django REST Framework
 
@@ -30,55 +15,69 @@ Language: Python 3.10+
 
 📁 Project Structure
 ecommerce_api/
-├── api/                 # Contains views, serializers, urls, models
-├── ecommerce/           # Main project settings and URLs
-├── db.sqlite3           # Local development database
-├── manage.py            # Django management file
-└── README.md            # Project documentation
+│
+├── api/           # API app (models, views, serializers, urls)
+├── ecommerce/     # Main project (settings and urls)
+├── db.sqlite3     # Local SQLite database
+├── manage.py      # Django management script
+└── README.md      # This file
 
-🚀 Getting Started
-1️⃣ Clone the repository
-git clone https://github.com/<your-username>/ecommerce_api.git
+ How to Run the Project
+ Clone the repository
+git clone https://github.com/YOUR-USERNAME/ecommerce_api.git
 cd ecommerce_api
 
-2️⃣ Create and activate virtual environment
+ Create a virtual environment
 python -m venv venv
-source venv/bin/activate      # macOS/Linux
-venv\Scripts\activate         # Windows
 
-3️⃣ Install dependencies
+
+Activate it:
+
+venv\Scripts\activate      # On Windows
+source venv/bin/activate   # On macOS/Linux
+
+ Install dependencies
 pip install django djangorestframework
 
-4️⃣ Run migrations
+ Run migrations
 python manage.py migrate
 
-5️⃣ Create superuser
+ Create superuser
 python manage.py createsuperuser
 
-6️⃣ Start the server
+ Start the server
 python manage.py runserver
 
-🌐 API Endpoints
+
+Now open this in your browser:
+ http://localhost:8000/api/products/
+
+ API Endpoints
 Method	Endpoint	Description
 GET	/api/products/	List all products
-POST	/api/products/	Create a new product
-GET	/api/products/{id}/	Retrieve a product
-PUT	/api/products/{id}/	Update a product
+POST	/api/products/	Add a new product
+GET	/api/products/{id}/	View one product
+PUT	/api/products/{id}/	Edit a product
 DELETE	/api/products/{id}/	Delete a product
-🔑 Admin Panel
 
-Visit:
-👉 http://localhost:8000/admin/
-
-Login with your superuser credentials to manage products easily.
-
-🧾 Example JSON (POST)
+ Example JSON (for POST)
 {
   "name": "Wireless Mouse",
-  "description": "Ergonomic Bluetooth mouse",
-  "price": "2500.00"
+  "description": "Bluetooth mouse with long battery life",
+  "price": "2500.00",
+  "category": "Electronics",
+  "stock_quantity": 30,
+  "image_url": "https://example.com/mouse.jpg"
 }
 
-👨‍💻 Author
+ Admin Panel
+
+Manage all products through the admin dashboard:
+ http://localhost:8000/admin/
+
+Use your superuser login credentials.
+
+Author
 
 Joram Kirubi
+E-commerce API – ALX Final Project

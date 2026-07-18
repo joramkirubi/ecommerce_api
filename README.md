@@ -1,3 +1,4 @@
+
 E-commerce API (Django REST Framework)
 
 A simple E-commerce API built with Django and Django REST Framework.
@@ -13,7 +14,7 @@ SQLite3
 
 Python 3.13.7
 
-How to Run
+How to run this E commerce API in few minutes:
 
 1. Clone the repository
 
